@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Donor Darah</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffecec;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #d92c2c;
+        }
+        .navbar-brand {
+            color: white;
+        }
+        .footer {
+            background-color: #d92c2c;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        h1, p {
+            color: #d92c2c;
+        }
+        .form-section {
+            margin-top: 30px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-danger {
+            background-color: #d92c2c;
+            border-color: #d92c2c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Donor Darah</a>
+        </div>
+    </nav>
+
+    <!-- Pendaftaran Donor Darah -->
+    <div class="container mt-5">
+        <h1 class="text-center">Pendaftaran Donor Darah</h1>
+        <p class="text-center">Isi formulir berikut untuk mendaftar sebagai pendonor darah:</p>
+
+        <div class="form-section">
+            <form>
+                <div class="form-group">
+                    <label for="fullName">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="fullName" placeholder="Masukkan Nama Lengkap" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">No. Telepon</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Masukkan No. Telepon" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Lokasi Donor</label>
+                    <select class="form-control" id="location" required>
+                        <option value="lokasi1">Lokasi Donor Darah 1 - RS Siloam Purwakarta</option>
+                        <option value="lokasi2">Lokasi Donor Darah 2 - RS Radjak Purwakarta</option>
+                        <option value="lokasi3">Lokasi Donor Darah 3 - RS RamaHadi Purwakarta</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-danger btn-block">Daftar Donor</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        @Copyright by 22552011328_NovitaR_222W
+    </footer>
+
+</body>
+</html>

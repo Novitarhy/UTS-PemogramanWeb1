@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Donor Darah</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffecec;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #d92c2c;
+        }
+        .navbar-brand {
+            color: white;
+        }
+        .footer {
+            background-color: #d92c2c;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        h1, p {
+            color: #d92c2c;
+        }
+        .card {
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #d92c2c;
+            color: white;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .btn-danger {
+            background-color: #d92c2c;
+            border-color: #d92c2c;
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Donor Darah</a>
+        </div>
+    </nav>
+
+    <!-- Riwayat Donor Darah -->
+    <div class="container mt-5">
+        <h1 class="text-center">Riwayat Donor Darah Anda</h1>
+        <p class="text-center">Berikut adalah riwayat donor darah Anda yang telah tercatat.</p>
+
+        <!-- Tabel Riwayat Donor -->
+        <div class="card">
+            <div class="card-header">
+                Riwayat Donor Darah
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Tanggal Donor</th>
+                            <th>Jumlah Darah (ml)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data Riwayat Donor -->
+                        <tr>
+                            <td>12 Januari 2024</td>
+                            <td>450 ml</td>
+                            <td>Berhasil</td>
+                        </tr>
+                        <tr>
+                            <td>25 Agustus 2023</td>
+                            <td>450 ml</td>
+                            <td>Berhasil</td>
+                        </tr>
+                        <tr>
+                            <td>15 Maret 2023</td>
+                            <td>450 ml</td>
+                            <td>Berhasil</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Tombol untuk menambah riwayat donor baru -->
+                <a href="pendaftaran.html" class="btn btn-danger btn-block mt-4">Donor Darah Sekarang</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        @Copyright by 22552011328_NovitaR_222W
+    </footer>
+
+</body>
+</html>

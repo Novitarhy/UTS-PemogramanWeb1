@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Donor Darah</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .login-section {
+            background-color: #d92c2c;
+            color: rgb(247, 237, 237);
+            padding: 100px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .login-form {
+            margin-top: 30px;
+            background-color: rgb(106, 12, 12);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #d92c2c;
+            color: white;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .register-link {
+            margin-top: 20px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Section -->
+    <div class="login-section">
+        <div class="container">
+            <h1>Login</h1>
+            <div class="login-form">
+                <form id="loginForm" onsubmit="return validateLogin(event)">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block">Login</button>
+                </form>
+                <!-- Link ke halaman registrasi jika belum punya akun -->
+                <div class="register-link">
+                    <p>Belum punya akun? <a href="register.html" class="text-white">Daftar Sekarang</a></p>
+                </div>
+                <div id="error-message" class="error-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>@Copyright by_22552011328_NovitaRahmayani_222W</p>
+    </div>
+
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Mencegah halaman reload ketika form disubmit
+
+            // Ambil data dari form
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Cek validasi login (Anda bisa menambahkan lebih banyak user/password yang valid)
+            const validUsername = 'admin';  // Username valid
+            const validPassword = 'password123';  // Password valid
+
+            const errorMessage = document.getElementById('error-message'); // Elemen pesan error
+
+            // Validasi login menggunakan percabangan if
+            if (username === validUsername && password === validPassword) {
+                // Login berhasil, arahkan ke halaman menu utama
+                window.location.href = 'dashboard.html'; // Ganti dengan URL menu utama Anda
+            } else {
+                // Login gagal, tampilkan pesan error
+                errorMessage.textContent = 'Username atau Password salah!'; 
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
